@@ -1,0 +1,50 @@
+.CarsList {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-container {
+    position: absolute;
+    width: 60%;
+    background: #ffffff;
+    left: 25%;
+    top: 30%;
+    padding: 20px;
+}
+
+.CarsList a {
+display: inline-block;
+    background-color: #61dafb;
+    padding: 10px;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.CarsList .form-group input {
+    margin: 15px;
+    border: 2px;
+    border-bottom: 2px solid #61dafb;
+}
+
+.CarsList button {
+    display: inline-block;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.CarsList h1 {
+    text-align: left;
+    display: inline-block;
+    margin-right: 1000px;
+
+}
+
+
