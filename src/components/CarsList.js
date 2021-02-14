@@ -74,7 +74,7 @@ class CarsList extends React.PureComponent {
                     <Modal show={this.state.ismodal} handleClose={e => this.modalClose(e)}>
                     <h2>ADD NEW CAR</h2>
                     <div className="form-group">
-                        <ModalForm initialValues={this.props.cars} onClick={this.activeMode}/>
+                        <ModalForm onClick={this.activeMode}/>
                     </div>
                 </Modal>
             </div>

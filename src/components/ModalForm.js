@@ -50,14 +50,14 @@ const ModalFormRedux = reduxForm({
     form: "cars"
 })(ModalFormData)
 
-const ModalForm = ({saveCar, cars}) => {
+const ModalForm = ({saveCar}) => {
 
     const onSubmit = (formData) => {
         saveCar(formData)
     }
     return (
         <div>
-            <ModalFormRedux initialValues={cars} onSubmit={onSubmit}/>
+            <ModalFormRedux  onSubmit={onSubmit}/>
         </div>
     )
 }
