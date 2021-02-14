@@ -3,7 +3,6 @@ import {Field, reduxForm} from "redux-form";
 import {saveCar} from "../store/carReduser";
 import {connect} from "react-redux";
 
-
 const ModalFormData = ({handleSubmit}) => {
     return (
         <form onSubmit={handleSubmit}>
@@ -29,15 +28,16 @@ const ModalFormData = ({handleSubmit}) => {
                     type="text"
                     placeholder="Model"
                     component="input"
-                    className="form-control-number"
+                    className="form-control-number pr-5"
                 />
+                <label >Engine Type</label>
                 <Field
+                    className="btn btn-primary m-3"
                     name="engineType"
-                    type="text"
-                    placeholder="Engine Type"
-                    component="input"
-                    className="form-control-enginerType"
-                />
+                    component="select">
+                    <option value="FUEL">FUEL</option>
+                    <option value="GAS">GAS</option>
+                </Field>
             </div>
             <div className="form-group">
                 <button>Save</button>
@@ -50,14 +50,14 @@ const ModalFormRedux = reduxForm({
     form: "cars"
 })(ModalFormData)
 
-const ModalForm = ({saveCar}) => {
+const ModalForm = ({saveCar, cars}) => {
 
     const onSubmit = (formData) => {
         saveCar(formData)
     }
     return (
         <div>
-            <ModalFormRedux  onSubmit={onSubmit}/>
+            <ModalFormRedux initialValues={cars} onSubmit={onSubmit}/>
         </div>
     )
 }

@@ -9,21 +9,21 @@
 
 .modal-container {
     position: absolute;
-    width: 60%;
     background: #ffffff;
     left: 25%;
     top: 30%;
     padding: 20px;
 }
 
-.CarsList a {
-display: inline-block;
+.CarsList .modal-container a {
+    position: absolute;
     background-color: #61dafb;
-    padding: 10px;
     text-decoration: none;
     border: 1px solid black;
     border-radius: 5px;
-    width: 100px;
+    padding: 5px;
+    left: 92%;
+    top: 2%;
 }
 
 .CarsList .form-group input {

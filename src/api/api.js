@@ -14,6 +14,9 @@ export const carsApi = {
         return instance.post(`api/car`, formData )
     },
     delete(carId){
-        return instance.delete(`api/car/${carId}`,)
+        return instance.delete(`api/car/${carId}`)
+    },
+    update(carId, carForm){
+        return instance.put(`api/car/${carId}`, carForm)
     }
 }

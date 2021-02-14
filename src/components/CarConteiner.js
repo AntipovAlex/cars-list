@@ -1,7 +1,7 @@
 import {Component} from "react";
 import Car from "./Car";
 import {connect} from "react-redux";
-import {deleteCar} from "../store/carReduser";
+import {deleteCar, updateCar} from "../store/carReduser";
 
 class CarConteiner extends Component {
     render() {
@@ -16,4 +16,4 @@ const mapStateToProps = (state) => {
     };
 }
 
-export default connect(mapStateToProps,{deleteCar})(CarConteiner);
+export default connect(mapStateToProps,{deleteCar, updateCar})(CarConteiner);

@@ -26,7 +26,6 @@ const carReduser = (state = initialState, action) =>{
             }
         case SET_CARS: {
             return {...state, cars: [...action.cars]}
-            //return {...state, cars: state.cars.map(c => c =action.cars)}
         }
         case DELETE_CAR: {
             return {...state, cars: state.cars.filter(p => p.id != action.carId)}
@@ -55,12 +54,18 @@ export const getCarsThunkCreater = ()=> async(dispatch) => {
     dispatch(setCarsAC(data.cars));
 }
 
-export const deleteCar =(carId) =>
-    async (dispatch) => {
+export const deleteCar = (carId) => async (dispatch) => {
     const data = await carsApi.delete(carId)
-        if (data) {
-            dispatch(deleteCarAC(carId))
-        }
+    if (data) {
+        dispatch(deleteCarAC(carId))
     }
+}
+
+export const updateCar = (carId, carForm) => async (dispatch) => {
+    const data = await carsApi.update(carId, carForm)
+    if (data) {
+        dispatch(setCarsAC(data))
+    }
+}
 
 export default carReduser;
